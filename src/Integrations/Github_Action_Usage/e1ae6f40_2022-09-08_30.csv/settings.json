@@ -1,0 +1,17 @@
+{
+  "$schema": "https://s.dev.y42.dev/integrations/file-upload/0.0.0/source.json#csv",
+  "content-type": "text/csv",
+  "uploadTarget": "https://storage.googleapis.com/upload/storage/v1/b/y42_nham_ef8accb8840846099f147a6777de8c08/o?uploadType=resumable&upload_id=ADPycds-tqmuImDYQg7f2lCi5VgxBoKCp8aS9bFKAN5YGEzxDjtWU-QNDcDj1wlTGBo8SEPqVWBZOTY2tDBLpQ6Piuu6sA",
+  "originalName": "e1ae6f40_2022-09-08_30.csv",
+  "size": "696104",
+  "uri": "gs://y42_nham_ef8accb8840846099f147a6777de8c08/userUploads/v2/6/file-upload/887d6abc-fe79-467e-8db2-d8c197b1e29e",
+  "csv_options": {
+    "field_delimiter": ",",
+    "allow_quoted_new_lines": true,
+    "null_marker": "",
+    "ignore_unknown_values": false,
+    "encoding": "UTF-8",
+    "quote": "\"",
+    "skip_leading_rows": null
+  }
+}
