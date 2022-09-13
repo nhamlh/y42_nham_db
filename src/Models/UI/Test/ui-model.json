@@ -1,5 +1,67 @@
 {
-  "nodeDataArray": [],
-  "linkDataArray": [],
+  "nodeDataArray": [
+    {
+      "key": "d6cc438f-08c9-48fd-b278-ffc3605bfead",
+      "type": "INPUT",
+      "category": "INPUT",
+      "transformationStep": {
+        "id": "d6cc438f-08c9-48fd-b278-ffc3605bfead",
+        "title": "e1ae6f40_2022-09-08_30.csv",
+        "transformationType": "INPUT",
+        "datasourceName": "Github Action Usage",
+        "transformObject": {
+          "source": "src/Integrations/Github_Action_Usage",
+          "table": "src/Integrations/Github_Action_Usage/e1ae6f40_2022-09-08_30.csv",
+          "lang": ""
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-578 -89"
+    },
+    {
+      "key": "ca8fda11-7e0f-47b5-9ba1-ca6066469192",
+      "type": "FILTER",
+      "category": "FILTER",
+      "transformationStep": {
+        "id": "ca8fda11-7e0f-47b5-9ba1-ca6066469192",
+        "title": "is Actions",
+        "transformationType": "FILTER",
+        "transformObject": {
+          "global_op": [
+            "AND"
+          ],
+          "filterOps": [
+            {
+              "variable_field_name": "product",
+              "variable_type": "STRING",
+              "operations": [
+                {
+                  "type": "STRING",
+                  "operator": "=",
+                  "operator_type": "absolute",
+                  "value_type": "NONE",
+                  "values": [
+                    "Actions"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "-307 -89"
+    }
+  ],
+  "linkDataArray": [
+    {
+      "to": "ca8fda11-7e0f-47b5-9ba1-ca6066469192",
+      "from": "d6cc438f-08c9-48fd-b278-ffc3605bfead",
+      "frompid": "OUT",
+      "topid": "IN"
+    }
+  ],
   "$schema": "https://s.dev.y42.dev/integrations/ui_model/0.0.1/model.json"
 }
