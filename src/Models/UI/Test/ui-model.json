@@ -53,12 +53,89 @@
       "isGroup": true,
       "group": "",
       "location": "-307 -89"
+    },
+    {
+      "key": "9edea305-1ee3-4d1d-bca5-cfbb38e9a2f2",
+      "type": "GROUP_BY",
+      "category": "GROUP_BY",
+      "transformationStep": {
+        "id": "9edea305-1ee3-4d1d-bca5-cfbb38e9a2f2",
+        "title": "",
+        "transformationType": "GROUP_BY",
+        "transformObject": {
+          "columns": [
+            {
+              "name": "actions_workflow",
+              "alias": "quantity",
+              "func": "COUNT"
+            }
+          ],
+          "groupBy": [
+            "actions_workflow"
+          ]
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "23 -88"
+    },
+    {
+      "key": "f6f15d75-339a-4bd6-b3a8-9d237814c826",
+      "type": "OUTPUT",
+      "category": "OUTPUT",
+      "transformationStep": {
+        "id": "f6f15d75-339a-4bd6-b3a8-9d237814c826",
+        "title": "test_output",
+        "transformationType": "OUTPUT",
+        "transformObject": {
+          "name": "test_output",
+          "fields": [
+            {
+              "target": "actions_workflow",
+              "source": "actions_workflow",
+              "type": "STRING",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            },
+            {
+              "target": "quantity",
+              "source": "quantity",
+              "type": "NUMERIC",
+              "display": true,
+              "changed": false,
+              "description": "",
+              "source_alias": "",
+              "applied": false,
+              "sourceTypeChanged": false
+            }
+          ]
+        }
+      },
+      "isGroup": true,
+      "group": "",
+      "location": "318 -88"
     }
   ],
   "linkDataArray": [
     {
       "to": "ca8fda11-7e0f-47b5-9ba1-ca6066469192",
       "from": "d6cc438f-08c9-48fd-b278-ffc3605bfead",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "to": "9edea305-1ee3-4d1d-bca5-cfbb38e9a2f2",
+      "from": "ca8fda11-7e0f-47b5-9ba1-ca6066469192",
+      "frompid": "OUT",
+      "topid": "IN"
+    },
+    {
+      "to": "f6f15d75-339a-4bd6-b3a8-9d237814c826",
+      "from": "9edea305-1ee3-4d1d-bca5-cfbb38e9a2f2",
       "frompid": "OUT",
       "topid": "IN"
     }
