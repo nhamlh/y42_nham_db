@@ -1,0 +1,8 @@
+{
+  "$schema": "https://s.dev.y42.dev/frontend/0.0.5/visualization/visualization-dashboard-settings.json",
+  "theme": "src/Visualizations/Themes/Actions Usage-c8dab4ae-b019-4f9d-9868-56e4eeb00257.json",
+  "order": [
+    "src/Visualizations/Dashboards/Actions_Usage/Tab_1"
+  ],
+  "enable_cross_filtering": true
+}
